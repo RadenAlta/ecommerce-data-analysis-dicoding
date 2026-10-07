@@ -1,1 +1,1 @@
-ISI_DENGAN_TAUTAN_STREAMLIT_COMMUNITY_CLOUD_ANDA (contoh: https://nama-app-anda.streamlit.app)
+https://ecommerce-data-analysis-dicoding-ite6wybsvors6dl647y7ne.streamlit.app/
