@@ -1,0 +1,9 @@
+streamlit==1.65.0
+pandas==3.0.2
+numpy==2.4.4
+matplotlib==3.10.8
+seaborn==0.13.2
+plotly==7.1.0
+Babel==2.18.0
+folium==0.20.0
+branca==0.8.2

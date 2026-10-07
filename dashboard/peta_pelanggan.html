@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_853c80f52e20bd5970855d571b41260e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_853c80f52e20bd5970855d571b41260e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_853c80f52e20bd5970855d571b41260e = L.map(
+                "map_853c80f52e20bd5970855d571b41260e",
+                {
+                    center: [-15.0, -52.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f2e67aeb3738252909d800359a792f3c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f2e67aeb3738252909d800359a792f3c.addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            var circle_marker_d6fb826d34d0505ce54029d22f97450c = L.circleMarker(
+                [-23.165439290940302, -47.04953828654481],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee08bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.93427798915086, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_d6fb826d34d0505ce54029d22f97450c.bindTooltip(
+                `<div>
+                     <b>SP</b><br>Pelanggan: 39,048<br>Revenue: R$ 5,052,686<br>Lama kirim: 8.7 hari<br>Review: 4.25
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32cc9a08321a72cc547159490716acf4 = L.circleMarker(
+                [-22.760080242114945, -43.1784132697915],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f8995eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.16513755032486, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_32cc9a08321a72cc547159490716acf4.bindTooltip(
+                `<div>
+                     <b>RJ</b><br>Pelanggan: 11,879<br>Revenue: R$ 1,751,434<br>Lama kirim: 15.3 hari<br>Review: 3.97
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c94f98828463df0a95cf9d3b5e047c9a = L.circleMarker(
+                [-19.916698417153405, -44.43242957868029],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbd75ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.452315987665745, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_c94f98828463df0a95cf9d3b5e047c9a.bindTooltip(
+                `<div>
+                     <b>MG</b><br>Pelanggan: 10,965<br>Revenue: R$ 1,547,473<br>Lama kirim: 12.0 hari<br>Review: 4.19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8546b56d782bc16a554d60ddff696fb6 = L.circleMarker(
+                [-29.71329925263199, -51.955785807544224],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f8995eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.959422133940159, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_8546b56d782bc16a554d60ddff696fb6.bindTooltip(
+                `<div>
+                     <b>RS</b><br>Pelanggan: 5,149<br>Revenue: R$ 726,038<br>Lama kirim: 15.3 hari<br>Review: 4.19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_012382f0551760a7a1cc55f83ddfadb6 = L.circleMarker(
+                [-24.814342137072245, -50.78865892965586],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbd75ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.48670729340852, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_012382f0551760a7a1cc55f83ddfadb6.bindTooltip(
+                `<div>
+                     <b>PR</b><br>Pelanggan: 4,750<br>Revenue: R$ 664,048<br>Lama kirim: 12.0 hari<br>Review: 4.24
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee781c4ed17c457b01c013f5d633ddf9 = L.circleMarker(
+                [-27.25214066176963, -49.56623374546721],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f99d61ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.773831274263832, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_ee781c4ed17c457b01c013f5d633ddf9.bindTooltip(
+                `<div>
+                     <b>SC</b><br>Pelanggan: 3,439<br>Revenue: R$ 504,324<br>Lama kirim: 15.0 hari<br>Review: 4.13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_440d23c5a1dd26ba7c241531eaace49e = L.circleMarker(
+                [-13.029084207905662, -39.48260389706951],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.361564446655745, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_440d23c5a1dd26ba7c241531eaace49e.bindTooltip(
+                `<div>
+                     <b>BA</b><br>Pelanggan: 3,155<br>Revenue: R$ 493,339<br>Lama kirim: 19.3 hari<br>Review: 3.93
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6be637cbcced7ca03e9bd1f68c69f17b = L.circleMarker(
+                [-15.808696586743983, -47.97631994949074],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbb36eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.477744758058186, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_6be637cbcced7ca03e9bd1f68c69f17b.bindTooltip(
+                `<div>
+                     <b>DF</b><br>Pelanggan: 2,013<br>Revenue: R$ 295,455<br>Lama kirim: 12.9 hari<br>Review: 4.13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0d7f1879f9a2bfc465c316d6ea9041a = L.circleMarker(
+                [-20.155714189273596, -40.477144673833685],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f8945bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.31247032282677, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_e0d7f1879f9a2bfc465c316d6ea9041a.bindTooltip(
+                `<div>
+                     <b>ES</b><br>Pelanggan: 1,925<br>Revenue: R$ 267,784<br>Lama kirim: 15.8 hari<br>Review: 4.08
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6963dc767f985e1cee517d9e91a68bc9 = L.circleMarker(
+                [-16.61462163189474, -49.32738941767946],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f8955cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.243771270700243, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_6963dc767f985e1cee517d9e91a68bc9.bindTooltip(
+                `<div>
+                     <b>GO</b><br>Pelanggan: 1,889<br>Revenue: R$ 281,932<br>Lama kirim: 15.6 hari<br>Review: 4.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6491c8a6d8418c6658fbf671166fd68a = L.circleMarker(
+                [-8.194269403380451, -35.76444454238814],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57649ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.55108133567785, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_6491c8a6d8418c6658fbf671166fd68a.bindTooltip(
+                `<div>
+                     <b>PE</b><br>Pelanggan: 1,545<br>Revenue: R$ 250,640<br>Lama kirim: 18.4 hari<br>Review: 4.08
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f22ef0e25fc060d868be92e772be009 = L.circleMarker(
+                [-4.330383190688837, -38.966346682204694],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e6593dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.897268670984712, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_1f22ef0e25fc060d868be92e772be009.bindTooltip(
+                `<div>
+                     <b>CE</b><br>Pelanggan: 1,252<br>Revenue: R$ 218,108<br>Lama kirim: 21.2 hari<br>Review: 3.94
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66be39454911ee6d04e2d42f9f537231 = L.circleMarker(
+                [-2.472459919566376, -49.145196992242845],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d33f37ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.049752469181039, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_66be39454911ee6d04e2d42f9f537231.bindTooltip(
+                `<div>
+                     <b>PA</b><br>Pelanggan: 918<br>Revenue: R$ 173,383<br>Lama kirim: 23.8 hari<br>Review: 3.91
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3abf40006ffe714c52a4b362a372315b = L.circleMarker(
+                [-14.354621029818734, -55.71567500787264],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f67b4bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.87339717240448, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_3abf40006ffe714c52a4b362a372315b.bindTooltip(
+                `<div>
+                     <b>MT</b><br>Pelanggan: 855<br>Revenue: R$ 152,144<br>Lama kirim: 18.1 hari<br>Review: 4.14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bda9db6c8b4ed0da6ba54f1e0de79be = L.circleMarker(
+                [-3.591436989867071, -44.716263348662544],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e4563dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.39696865275764, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_4bda9db6c8b4ed0da6ba54f1e0de79be.bindTooltip(
+                `<div>
+                     <b>MA</b><br>Pelanggan: 696<br>Revenue: R$ 116,305<br>Lama kirim: 21.5 hari<br>Review: 3.83
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7fd992bd7941ac6cf2e27b6f5a99525 = L.circleMarker(
+                [-20.736083884180214, -54.4321603828168],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f8955cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.349329450233295, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_e7fd992bd7941ac6cf2e27b6f5a99525.bindTooltip(
+                `<div>
+                     <b>MS</b><br>Pelanggan: 681<br>Revenue: R$ 115,430<br>Lama kirim: 15.6 hari<br>Review: 4.16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90dc611dcfec359b9eba714aac87800a = L.circleMarker(
+                [-7.0878187340307734, -35.625412692806684],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ec6240ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.737943582000968, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_90dc611dcfec359b9eba714aac87800a.bindTooltip(
+                `<div>
+                     <b>PB</b><br>Pelanggan: 503<br>Revenue: R$ 112,537<br>Lama kirim: 20.4 hari<br>Review: 4.07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71a1aefa3bd5f642b3032c651849ac03 = L.circleMarker(
+                [-5.53846824928788, -42.60124983167964],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46c42ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.586239131891668, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_71a1aefa3bd5f642b3032c651849ac03.bindTooltip(
+                `<div>
+                     <b>PI</b><br>Pelanggan: 463<br>Revenue: R$ 84,511<br>Lama kirim: 19.4 hari<br>Review: 3.99
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f353fb6bbf8c2c1ddc0401f2afe2b19e = L.circleMarker(
+                [-5.836666715058468, -35.92926323092403],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f56e44ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.574601764921203, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_f353fb6bbf8c2c1ddc0401f2afe2b19e.bindTooltip(
+                `<div>
+                     <b>RN</b><br>Pelanggan: 460<br>Revenue: R$ 81,377<br>Lama kirim: 19.2 hari<br>Review: 4.14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31a558139b9a7af5cf4dc3677b702195 = L.circleMarker(
+                [-9.637526941578578, -36.05400823626889],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3734ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.274480450731417, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_31a558139b9a7af5cf4dc3677b702195.bindTooltip(
+                `<div>
+                     <b>AL</b><br>Pelanggan: 386<br>Revenue: R$ 78,806<br>Lama kirim: 24.5 hari<br>Review: 3.85
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9cc3b2bf88a7ef99d46f5ac7b545d816 = L.circleMarker(
+                [-10.874295245577427, -37.174020088296835],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5573dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.009245014211299, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_9cc3b2bf88a7ef99d46f5ac7b545d816.bindTooltip(
+                `<div>
+                     <b>SE</b><br>Pelanggan: 326<br>Revenue: R$ 56,289<br>Lama kirim: 21.4 hari<br>Review: 3.90
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08a1c4d05fd9b8cd9faa5e7230c4b1c4 = L.circleMarker(
+                [-9.773720867475513, -48.36599576683559],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f67f4eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.723355773061366, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_08a1c4d05fd9b8cd9faa5e7230c4b1c4.bindTooltip(
+                `<div>
+                     <b>TO</b><br>Pelanggan: 267<br>Revenue: R$ 48,403<br>Lama kirim: 17.7 hari<br>Review: 4.15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9cb59a43670c6a99e2610c1cc4593451 = L.circleMarker(
+                [-10.118233118138363, -62.85667908601269],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46c43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.533114025595111, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_9cb59a43670c6a99e2610c1cc4593451.bindTooltip(
+                `<div>
+                     <b>RO</b><br>Pelanggan: 231<br>Revenue: R$ 45,683<br>Lama kirim: 19.4 hari<br>Review: 4.17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b35df9492dff8e94239c8e30455a3a3 = L.circleMarker(
+                [-3.2026799061267255, -60.06037547284214],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bf232fff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.972026594366539, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_1b35df9492dff8e94239c8e30455a3a3.bindTooltip(
+                `<div>
+                     <b>AM</b><br>Pelanggan: 140<br>Revenue: R$ 22,156<br>Lama kirim: 26.4 hari<br>Review: 4.24
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1497c66cf489d385230f36af7d32129a = L.circleMarker(
+                [-9.940033576002305, -68.05093835247689],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e85b3eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.452966314513558, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_1497c66cf489d385230f36af7d32129a.bindTooltip(
+                `<div>
+                     <b>AC</b><br>Pelanggan: 76<br>Revenue: R$ 15,931<br>Lama kirim: 21.0 hari<br>Review: 4.09
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14689c7b73a09cce6673de4e8cab62dc = L.circleMarker(
+                [0.03838337020481566, -51.16960278616838],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ba1c2dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.35400640077266, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_14689c7b73a09cce6673de4e8cab62dc.bindTooltip(
+                `<div>
+                     <b>AP</b><br>Pelanggan: 66<br>Revenue: R$ 13,375<br>Lama kirim: 27.2 hari<br>Review: 4.24
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d23b1eb2163ade809743b7d92345477 = L.circleMarker(
+                [2.836003979187758, -60.67559953762982],
+                {"bubblingMouseEvents": true, "color": "#333", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.040832999733066, "stroke": true, "weight": 1}
+            ).addTo(map_853c80f52e20bd5970855d571b41260e);
+        
+    
+            circle_marker_4d23b1eb2163ade809743b7d92345477.bindTooltip(
+                `<div>
+                     <b>RR</b><br>Pelanggan: 39<br>Revenue: R$ 7,018<br>Lama kirim: 29.9 hari<br>Review: 3.90
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+    var color_map_19e47558a8bb3e9dff189546f48de8de = {};
+
+    
+    color_map_19e47558a8bb3e9dff189546f48de8de.color = d3.scale.threshold()
+              .domain([8.73857916870711, 8.781002172349202, 8.823425175991295, 8.865848179633387, 8.90827118327548, 8.950694186917572, 8.993117190559664, 9.035540194201756, 9.077963197843848, 9.120386201485939, 9.162809205128031, 9.205232208770123, 9.247655212412216, 9.290078216054308, 9.3325012196964, 9.374924223338493, 9.417347226980585, 9.459770230622677, 9.50219323426477, 9.544616237906862, 9.587039241548954, 9.629462245191046, 9.671885248833139, 9.71430825247523, 9.756731256117323, 9.799154259759415, 9.841577263401508, 9.8840002670436, 9.92642327068569, 9.968846274327783, 10.011269277969875, 10.053692281611967, 10.09611528525406, 10.138538288896152, 10.180961292538244, 10.223384296180337, 10.265807299822429, 10.308230303464521, 10.350653307106613, 10.393076310748706, 10.435499314390798, 10.47792231803289, 10.520345321674982, 10.562768325317075, 10.605191328959165, 10.647614332601258, 10.69003733624335, 10.732460339885442, 10.774883343527534, 10.817306347169627, 10.859729350811719, 10.902152354453811, 10.944575358095904, 10.986998361737996, 11.029421365380088, 11.07184436902218, 11.114267372664273, 11.156690376306365, 11.199113379948457, 11.24153638359055, 11.283959387232642, 11.326382390874734, 11.368805394516826, 11.411228398158919, 11.453651401801011, 11.496074405443101, 11.538497409085194, 11.580920412727286, 11.623343416369378, 11.66576642001147, 11.708189423653563, 11.750612427295655, 11.793035430937747, 11.83545843457984, 11.877881438221932, 11.920304441864024, 11.962727445506117, 12.005150449148207, 12.047573452790301, 12.089996456432393, 12.132419460074484, 12.174842463716576, 12.217265467358668, 12.25968847100076, 12.302111474642853, 12.344534478284945, 12.386957481927038, 12.42938048556913, 12.471803489211222, 12.514226492853314, 12.556649496495407, 12.599072500137499, 12.641495503779591, 12.683918507421684, 12.726341511063776, 12.768764514705868, 12.81118751834796, 12.853610521990053, 12.896033525632145, 12.938456529274237, 12.980879532916328, 13.023302536558422, 13.065725540200514, 13.108148543842605, 13.150571547484697, 13.192994551126791, 13.235417554768881, 13.277840558410974, 13.320263562053066, 13.362686565695158, 13.40510956933725, 13.447532572979341, 13.489955576621433, 13.532378580263527, 13.574801583905618, 13.61722458754771, 13.659647591189803, 13.702070594831895, 13.744493598473987, 13.78691660211608, 13.829339605758172, 13.871762609400264, 13.914185613042356, 13.956608616684449, 13.99903162032654, 14.041454623968633, 14.083877627610725, 14.126300631252818, 14.16872363489491, 14.211146638537002, 14.253569642179095, 14.295992645821187, 14.338415649463279, 14.380838653105371, 14.423261656747464, 14.465684660389554, 14.508107664031648, 14.55053066767374, 14.592953671315831, 14.635376674957925, 14.677799678600017, 14.720222682242108, 14.7626456858842, 14.805068689526292, 14.847491693168385, 14.889914696810477, 14.932337700452567, 14.974760704094662, 15.017183707736752, 15.059606711378844, 15.102029715020937, 15.144452718663029, 15.186875722305121, 15.229298725947213, 15.271721729589306, 15.314144733231398, 15.35656773687349, 15.398990740515583, 15.441413744157675, 15.483836747799767, 15.52625975144186, 15.568682755083952, 15.611105758726044, 15.653528762368136, 15.695951766010229, 15.73837476965232, 15.780797773294413, 15.823220776936505, 15.865643780578598, 15.90806678422069, 15.950489787862782, 15.992912791504875, 16.035335795146967, 16.077758798789056, 16.12018180243115, 16.16260480607324, 16.205027809715332, 16.24745081335743, 16.289873816999517, 16.33229682064161, 16.3747198242837, 16.417142827925794, 16.459565831567886, 16.50198883520998, 16.54441183885207, 16.586834842494163, 16.629257846136255, 16.671680849778348, 16.71410385342044, 16.756526857062532, 16.798949860704624, 16.841372864346717, 16.88379586798881, 16.9262188716309, 16.968641875272994, 17.011064878915086, 17.053487882557178, 17.09591088619927, 17.138333889841363, 17.180756893483455, 17.223179897125547, 17.26560290076764, 17.30802590440973, 17.350448908051824, 17.392871911693916, 17.43529491533601, 17.4777179189781, 17.520140922620193, 17.562563926262285, 17.604986929904378, 17.64740993354647, 17.689832937188562, 17.732255940830655, 17.774678944472747, 17.81710194811484, 17.85952495175693, 17.901947955399024, 17.944370959041116, 17.98679396268321, 18.029216966325297, 18.071639969967393, 18.114062973609485, 18.156485977251574, 18.19890898089367, 18.24133198453576, 18.28375498817785, 18.326177991819947, 18.368600995462035, 18.411023999104128, 18.453447002746223, 18.495870006388312, 18.538293010030404, 18.580716013672493, 18.62313901731459, 18.66556202095668, 18.70798502459877, 18.750408028240866, 18.792831031882958, 18.835254035525047, 18.877677039167143, 18.920100042809235, 18.962523046451324, 19.00494605009342, 19.04736905373551, 19.0897920573776, 19.132215061019696, 19.174638064661785, 19.217061068303877, 19.259484071945973, 19.301907075588062, 19.344330079230154, 19.386753082872247, 19.42917608651434, 19.47159909015643, 19.514022093798523, 19.556445097440616, 19.598868101082708, 19.6412911047248, 19.683714108366893, 19.726137112008985, 19.768560115651077, 19.81098311929317, 19.85340612293526, 19.895829126577354, 19.938252130219446, 19.98067513386154, 20.02309813750363, 20.065521141145723, 20.107944144787815, 20.150367148429908, 20.192790152072, 20.235213155714092, 20.277636159356184, 20.320059162998277, 20.36248216664037, 20.40490517028246, 20.447328173924554, 20.489751177566646, 20.532174181208738, 20.57459718485083, 20.617020188492923, 20.659443192135015, 20.701866195777107, 20.7442891994192, 20.786712203061292, 20.829135206703384, 20.871558210345476, 20.91398121398757, 20.95640421762966, 20.99882722127175, 21.041250224913846, 21.083673228555938, 21.126096232198027, 21.168519235840122, 21.210942239482215, 21.253365243124303, 21.295788246766396, 21.33821125040849, 21.38063425405058, 21.423057257692673, 21.465480261334765, 21.507903264976857, 21.55032626861895, 21.59274927226104, 21.635172275903134, 21.677595279545226, 21.72001828318732, 21.76244128682941, 21.8048642904715, 21.847287294113595, 21.889710297755688, 21.932133301397776, 21.974556305039872, 22.016979308681965, 22.059402312324053, 22.101825315966146, 22.14424831960824, 22.18667132325033, 22.229094326892422, 22.271517330534515, 22.313940334176607, 22.3563633378187, 22.39878634146079, 22.441209345102884, 22.483632348744976, 22.52605535238707, 22.56847835602916, 22.610901359671253, 22.653324363313345, 22.695747366955437, 22.73817037059753, 22.780593374239622, 22.823016377881714, 22.865439381523807, 22.9078623851659, 22.95028538880799, 22.992708392450083, 23.035131396092176, 23.077554399734268, 23.11997740337636, 23.162400407018453, 23.204823410660545, 23.247246414302637, 23.28966941794473, 23.33209242158682, 23.374515425228914, 23.416938428871006, 23.4593614325131, 23.50178443615519, 23.544207439797283, 23.586630443439375, 23.629053447081468, 23.67147645072356, 23.713899454365652, 23.756322458007745, 23.798745461649837, 23.84116846529193, 23.88359146893402, 23.926014472576114, 23.968437476218206, 24.010860479860295, 24.05328348350239, 24.095706487144483, 24.13812949078657, 24.180552494428667, 24.222975498070756, 24.26539850171285, 24.307821505354944, 24.350244508997033, 24.392667512639125, 24.43509051628122, 24.47751351992331, 24.519936523565402, 24.562359527207498, 24.604782530849587, 24.64720553449168, 24.68962853813377, 24.732051541775864, 24.774474545417952, 24.816897549060045, 24.859320552702137, 24.90174355634423, 24.94416655998632, 24.986589563628414, 25.029012567270506, 25.071435570912598, 25.11385857455469, 25.156281578196783, 25.198704581838875, 25.241127585480967, 25.28355058912306, 25.325973592765152, 25.368396596407244, 25.410819600049336, 25.45324260369143, 25.49566560733352, 25.538088610975613, 25.580511614617706, 25.622934618259798, 25.66535762190189, 25.707780625543982, 25.750203629186075, 25.792626632828167, 25.83504963647026, 25.87747264011235, 25.919895643754444, 25.962318647396536, 26.00474165103863, 26.04716465468072, 26.089587658322813, 26.132010661964905, 26.174433665606998, 26.21685666924909, 26.259279672891182, 26.301702676533274, 26.344125680175367, 26.38654868381746, 26.42897168745955, 26.471394691101644, 26.513817694743736, 26.556240698385828, 26.59866370202792, 26.641086705670013, 26.683509709312105, 26.725932712954197, 26.76835571659629, 26.810778720238382, 26.853201723880474, 26.895624727522566, 26.93804773116466, 26.98047073480675, 27.022893738448843, 27.065316742090936, 27.107739745733028, 27.15016274937512, 27.192585753017212, 27.235008756659305, 27.27743176030139, 27.319854763943482, 27.36227776758558, 27.404700771227674, 27.447123774869766, 27.48954677851186, 27.531969782153944, 27.574392785796036, 27.616815789438135, 27.659238793080227, 27.70166179672232, 27.744084800364405, 27.786507804006497, 27.82893080764859, 27.871353811290682, 27.91377681493278, 27.956199818574873, 27.99862282221696, 28.04104582585905, 28.083468829501143, 28.125891833143235, 28.168314836785335, 28.21073784042742, 28.253160844069512, 28.295583847711605, 28.338006851353697, 28.38042985499579, 28.42285285863788, 28.465275862279974, 28.507698865922066, 28.55012186956416, 28.59254487320625, 28.634967876848343, 28.677390880490435, 28.719813884132527, 28.76223688777462, 28.804659891416712, 28.847082895058804, 28.889505898700897, 28.93192890234299, 28.97435190598508, 29.016774909627173, 29.059197913269266, 29.101620916911358, 29.14404392055345, 29.186466924195543, 29.228889927837635, 29.271312931479727, 29.31373593512182, 29.35615893876391, 29.398581942406004, 29.441004946048096, 29.48342794969019, 29.52585095333228, 29.568273956974373, 29.610696960616465, 29.653119964258558, 29.69554296790065, 29.737965971542742, 29.780388975184835, 29.822811978826927, 29.86523498246902, 29.90765798611111])
+              .range(['#fee08bff', '#fee08bff', '#fedf8aff', '#fedf8aff', '#fedf8aff', '#fede8aff', '#fede89ff', '#fedd89ff', '#fedd89ff', '#fedc88ff', '#fedc88ff', '#fedb88ff', '#fedb88ff', '#feda87ff', '#feda87ff', '#fed987ff', '#fed986ff', '#fed986ff', '#fed886ff', '#fed886ff', '#fed785ff', '#fed785ff', '#fed685ff', '#fed684ff', '#fed584ff', '#fdd584ff', '#fdd484ff', '#fdd483ff', '#fdd383ff', '#fdd383ff', '#fdd282ff', '#fdd282ff', '#fdd282ff', '#fdd181ff', '#fdd181ff', '#fdd081ff', '#fdd081ff', '#fdcf80ff', '#fdcf80ff', '#fdce80ff', '#fdce7fff', '#fdcd7fff', '#fdcd7fff', '#fdcc7fff', '#fdcc7eff', '#fdcc7eff', '#fdcb7eff', '#fdcb7dff', '#fdca7dff', '#fdca7dff', '#fcc97dff', '#fcc97cff', '#fcc87cff', '#fcc87cff', '#fcc77bff', '#fcc77bff', '#fcc67bff', '#fcc67bff', '#fcc67aff', '#fcc57aff', '#fcc57aff', '#fcc479ff', '#fcc479ff', '#fcc379ff', '#fcc379ff', '#fcc278ff', '#fcc278ff', '#fcc178ff', '#fcc177ff', '#fcc077ff', '#fcc077ff', '#fcc076ff', '#fcbf76ff', '#fcbf76ff', '#fcbe76ff', '#fbbe75ff', '#fbbd75ff', '#fbbd75ff', '#fbbc74ff', '#fbbc74ff', '#fbbb74ff', '#fbbb74ff', '#fbba73ff', '#fbba73ff', '#fbba73ff', '#fbb972ff', '#fbb972ff', '#fbb872ff', '#fbb872ff', '#fbb771ff', '#fbb771ff', '#fbb671ff', '#fbb670ff', '#fbb570ff', '#fbb570ff', '#fbb470ff', '#fbb46fff', '#fbb36fff', '#fbb36fff', '#fbb36eff', '#fab26eff', '#fab26eff', '#fab16dff', '#fab16dff', '#fab06dff', '#fab06dff', '#faaf6cff', '#faaf6cff', '#faae6cff', '#faae6bff', '#faad6bff', '#faad6bff', '#faad6bff', '#faac6aff', '#faac6aff', '#faab6aff', '#faab69ff', '#faaa69ff', '#faaa69ff', '#faa969ff', '#faa968ff', '#faa868ff', '#faa868ff', '#faa767ff', '#faa767ff', '#f9a767ff', '#f9a667ff', '#f9a666ff', '#f9a566ff', '#f9a566ff', '#f9a465ff', '#f9a465ff', '#f9a365ff', '#f9a365ff', '#f9a264ff', '#f9a264ff', '#f9a164ff', '#f9a163ff', '#f9a163ff', '#f9a063ff', '#f9a062ff', '#f99f62ff', '#f99f62ff', '#f99e62ff', '#f99e61ff', '#f99d61ff', '#f99d61ff', '#f99c60ff', '#f99c60ff', '#f99b60ff', '#f89b60ff', '#f89b5fff', '#f89a5fff', '#f89a5fff', '#f8995eff', '#f8995eff', '#f8985eff', '#f8985eff', '#f8975dff', '#f8975dff', '#f8965dff', '#f8965cff', '#f8955cff', '#f8955cff', '#f8945cff', '#f8945bff', '#f8945bff', '#f8935bff', '#f8935aff', '#f8925aff', '#f8925aff', '#f8915aff', '#f89159ff', '#f89059ff', '#f79059ff', '#f78f58ff', '#f78f58ff', '#f78e58ff', '#f78e57ff', '#f78e57ff', '#f78d57ff', '#f78d57ff', '#f78c56ff', '#f78c56ff', '#f78b56ff', '#f78b55ff', '#f78a55ff', '#f78a55ff', '#f78955ff', '#f78954ff', '#f78854ff', '#f78854ff', '#f78853ff', '#f78753ff', '#f78753ff', '#f78653ff', '#f78652ff', '#f78552ff', '#f78552ff', '#f68451ff', '#f68451ff', '#f68351ff', '#f68351ff', '#f68250ff', '#f68250ff', '#f68250ff', '#f6814fff', '#f6814fff', '#f6804fff', '#f6804eff', '#f67f4eff', '#f67f4eff', '#f67e4eff', '#f67e4dff', '#f67d4dff', '#f67d4dff', '#f67c4cff', '#f67c4cff', '#f67c4cff', '#f67b4cff', '#f67b4bff', '#f67a4bff', '#f67a4bff', '#f6794aff', '#f5794aff', '#f5784aff', '#f5784aff', '#f57749ff', '#f57749ff', '#f57649ff', '#f57648ff', '#f57548ff', '#f57548ff', '#f57548ff', '#f57447ff', '#f57447ff', '#f57347ff', '#f57346ff', '#f57246ff', '#f57246ff', '#f57146ff', '#f57145ff', '#f57045ff', '#f57045ff', '#f56f44ff', '#f56f44ff', '#f56f44ff', '#f56e43ff', '#f56e43ff', '#f46d43ff', '#f46d43ff', '#f46c43ff', '#f46c42ff', '#f36b42ff', '#f36b42ff', '#f36b42ff', '#f26a42ff', '#f26a42ff', '#f26942ff', '#f16942ff', '#f16842ff', '#f16841ff', '#f06741ff', '#f06741ff', '#f06741ff', '#f06641ff', '#ef6641ff', '#ef6541ff', '#ef6541ff', '#ee6440ff', '#ee6440ff', '#ee6340ff', '#ed6340ff', '#ed6340ff', '#ed6240ff', '#ec6240ff', '#ec6140ff', '#ec6140ff', '#eb603fff', '#eb603fff', '#eb603fff', '#ea5f3fff', '#ea5f3fff', '#ea5e3fff', '#e95e3fff', '#e95d3fff', '#e95d3fff', '#e95c3eff', '#e85c3eff', '#e85c3eff', '#e85b3eff', '#e75b3eff', '#e75a3eff', '#e75a3eff', '#e6593eff', '#e6593dff', '#e6593dff', '#e5583dff', '#e5583dff', '#e5573dff', '#e4573dff', '#e4563dff', '#e4563dff', '#e3553dff', '#e3553cff', '#e3553cff', '#e2543cff', '#e2543cff', '#e2533cff', '#e2533cff', '#e1523cff', '#e1523cff', '#e1523bff', '#e0513bff', '#e0513bff', '#e0503bff', '#df503bff', '#df4f3bff', '#df4f3bff', '#de4e3bff', '#de4e3bff', '#de4e3aff', '#dd4d3aff', '#dd4d3aff', '#dd4c3aff', '#dc4c3aff', '#dc4b3aff', '#dc4b3aff', '#dc4a3aff', '#db4a39ff', '#db4a39ff', '#db4939ff', '#da4939ff', '#da4839ff', '#da4839ff', '#d94739ff', '#d94739ff', '#d94739ff', '#d84638ff', '#d84638ff', '#d84538ff', '#d74538ff', '#d74438ff', '#d74438ff', '#d64338ff', '#d64338ff', '#d64338ff', '#d54237ff', '#d54237ff', '#d54137ff', '#d54137ff', '#d44037ff', '#d44037ff', '#d44037ff', '#d33f37ff', '#d33f36ff', '#d33e36ff', '#d23e36ff', '#d23d36ff', '#d23d36ff', '#d13c36ff', '#d13c36ff', '#d13c36ff', '#d03b36ff', '#d03b35ff', '#d03a35ff', '#cf3a35ff', '#cf3935ff', '#cf3935ff', '#ce3935ff', '#ce3835ff', '#ce3835ff', '#ce3734ff', '#cd3734ff', '#cd3634ff', '#cd3634ff', '#cc3534ff', '#cc3534ff', '#cc3534ff', '#cb3434ff', '#cb3434ff', '#cb3333ff', '#ca3333ff', '#ca3233ff', '#ca3233ff', '#c93133ff', '#c93133ff', '#c93133ff', '#c83033ff', '#c83032ff', '#c82f32ff', '#c72f32ff', '#c72e32ff', '#c72e32ff', '#c72e32ff', '#c62d32ff', '#c62d32ff', '#c62c32ff', '#c52c31ff', '#c52b31ff', '#c52b31ff', '#c42a31ff', '#c42a31ff', '#c42a31ff', '#c32931ff', '#c32931ff', '#c32831ff', '#c22830ff', '#c22730ff', '#c22730ff', '#c12730ff', '#c12630ff', '#c12630ff', '#c02530ff', '#c02530ff', '#c0242fff', '#c0242fff', '#bf232fff', '#bf232fff', '#bf232fff', '#be222fff', '#be222fff', '#be212fff', '#bd212fff', '#bd202eff', '#bd202eff', '#bc202eff', '#bc1f2eff', '#bc1f2eff', '#bb1e2eff', '#bb1e2eff', '#bb1d2eff', '#ba1d2dff', '#ba1c2dff', '#ba1c2dff', '#b91c2dff', '#b91b2dff', '#b91b2dff', '#b91a2dff', '#b81a2dff', '#b8192dff', '#b8192cff', '#b7182cff', '#b7182cff', '#b7182cff', '#b6172cff', '#b6172cff', '#b6162cff', '#b5162cff', '#b5152bff', '#b5152bff', '#b4152bff', '#b4142bff', '#b4142bff', '#b3132bff', '#b3132bff', '#b3122bff', '#b2122bff', '#b2112aff', '#b2112aff', '#b2112aff', '#b1102aff', '#b1102aff', '#b10f2aff', '#b00f2aff', '#b00e2aff', '#b00e29ff', '#af0e29ff', '#af0d29ff', '#af0d29ff', '#ae0c29ff', '#ae0c29ff', '#ae0b29ff', '#ad0b29ff', '#ad0a29ff', '#ad0a28ff', '#ac0a28ff', '#ac0928ff', '#ac0928ff', '#ac0828ff', '#ab0828ff', '#ab0728ff', '#ab0728ff', '#aa0728ff', '#aa0627ff', '#aa0627ff', '#a90527ff', '#a90527ff', '#a90427ff', '#a80427ff', '#a80327ff', '#a80327ff', '#a70326ff', '#a70226ff', '#a70226ff', '#a60126ff', '#a60126ff', '#a60026ff', '#a50026ff', '#a50026ff']);
+    
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.x = d3.scale.linear()
+              .domain([8.73857916870711, 29.90765798611111])
+              .range([0, 450 - 50]);
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.legend = L.control({position: 'topright'});
+    color_map_19e47558a8bb3e9dff189546f48de8de.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_19e47558a8bb3e9dff189546f48de8de.legend.addTo(map_853c80f52e20bd5970855d571b41260e);
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.xAxis = d3.svg.axis()
+        .scale(color_map_19e47558a8bb3e9dff189546f48de8de.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([8.73857916870711, 19.32311857740911, 29.90765798611111]);
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.g = color_map_19e47558a8bb3e9dff189546f48de8de.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.g.selectAll("rect")
+        .data(color_map_19e47558a8bb3e9dff189546f48de8de.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_19e47558a8bb3e9dff189546f48de8de.x(color_map_19e47558a8bb3e9dff189546f48de8de.color.domain()[i - 1]) : color_map_19e47558a8bb3e9dff189546f48de8de.x.range()[0],
+            x1: i < color_map_19e47558a8bb3e9dff189546f48de8de.color.domain().length ? color_map_19e47558a8bb3e9dff189546f48de8de.x(color_map_19e47558a8bb3e9dff189546f48de8de.color.domain()[i]) : color_map_19e47558a8bb3e9dff189546f48de8de.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_19e47558a8bb3e9dff189546f48de8de.g.call(color_map_19e47558a8bb3e9dff189546f48de8de.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Rata-rata lama pengiriman (hari)");
+</script>
+</html>
